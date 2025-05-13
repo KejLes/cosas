@@ -1,0 +1,96 @@
+#include <stdlib.h>
+#include <stdio.h>
+ 
+int ft_isdigit(int c)
+{
+    if (c >= '0' && c <= '9')
+        return (2048);
+    else
+        return (0);
+}
+
+int ft_atoi(const char *nptr)
+{
+	int simbolo_final = 1;
+	int	numero_final = 0;
+	int i = 0;
+	if (nptr[i] == '\0')
+		return 0;
+	while (nptr[i] == ' ' || nptr[i] == '	')
+		i++;
+	
+	if (nptr[i] == '-' || nptr[i] == '+')
+	{
+		if (nptr[i] == '-')
+			simbolo_final = -1;
+		if (ft_isdigit((int)nptr[i+1]) == 0)
+			return 0;
+		i++;
+	}
+	if (ft_isdigit((int)nptr[i]) == 0)
+		return 0;
+	while (nptr[i] != '\0' && ft_isdigit((int)nptr[i]) == 2048)
+	{
+		if (numero_final == 0)
+			numero_final = (nptr[i] - 48);
+		else
+			numero_final = numero_final * 10 + ((int)nptr[i] -48);
+		i++;
+	}
+	return numero_final * simbolo_final;
+}
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+// Prototipo de tu función personalizada
+int ft_atoi(const char *str);
+
+int main(void)
+{
+    char *ejemplos[] = {
+        "1000000000000",             // número seguido de letra
+        "  1234",           // espacios antes del número
+        "-1234ads",         // número negativo seguido de letras
+        " -  1234",         // signo negativo separado por espacios (no válido)
+        "--1234",           // doble signo negativo (no válido)
+        " +324",            // signo más con espacios antes
+        " ++1234",          // doble signo más (no válido)
+        "  -12 34",         // número negativo con espacio en medio
+        "0",                // cero
+        "-0",               // cero negativo
+        "+0",               // cero positivo
+        "42",               // número positivo simple
+        "-42",              // número negativo simple
+        "2147483647",       // INT_MAX
+        "-2147483648",      // INT_MIN
+        "  0000123",        // ceros a la izquierda
+        "   +0000123",      // ceros a la izquierda y signo
+        "9999999999999999999999", // número fuera del rango de int
+        "",                 // cadena vacía
+        "   ",              // solo espacios
+        "abc",              // solo letras
+        "+-123",            // signo más y menos juntos
+        "-+123",            // signo menos y más juntos
+        "123 456",          // número seguido de espacio y otro número
+        "   -0012a42",      // número negativo con ceros y letras
+        "    +42abc",       // número positivo con letras
+        "  12345678901234567890", // número muy grande
+        "2147483648",       // INT_MAX + 1
+        "-2147483649"       // INT_MIN - 1
+    };
+
+    int n = sizeof(ejemplos) / sizeof(ejemplos[0]);
+
+    for (int k = 0; k < n; k++) {
+        int i = atoi(ejemplos[k]);
+        int j = ft_atoi(ejemplos[k]);
+        printf("Prueba %2d: \"%s\"\n", k+1, ejemplos[k]);
+        printf("  atoi   = <%d>\n", i);
+        printf("  ft_atoi= <%d>\n", j);
+        printf("------------------------\n");
+    }
+
+    return 0;
+}
