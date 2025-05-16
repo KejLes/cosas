@@ -6,21 +6,18 @@
 /*   By: kcanales <kcanales@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 13:38:20 by kcanales          #+#    #+#             */
-/*   Updated: 2025/05/14 18:56:53 by kcanales         ###   ########.fr       */
+/*   Updated: 2025/05/16 18:17:12 by kcanales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <stdlib.h>
-# include <stdio.h>
-# include <unistd.h>
-
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}	t_list;
+#include <ctype.h>		// isalpha - Elminar antes de entregar
+#include <string.h>		// Memcpy - Eliminar antes de entregar
+# include <stdlib.h>	// Malloc
+# include <unistd.h>	// Para el write
+#include <stddef.h>		// Para definir el size_t
+#include <stdio.h>		// Printf - Eliminar antes de entregar
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -45,15 +42,15 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
 int		ft_atoi(const char *nptr);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(const char *s);
-// char	*ft_substr(char const *s, unsigned int start, size_t len);
-// char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
 // char	*ft_strtrim(char const *s1, char const *set);
 // char	**ft_split(char const *s, char c);
 // char	*ft_itoa(int n);
 // char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 // void	ft_striteri(char *s, void (*f)(unsigned int, char *));
-// void	ft_putchar_fd(char c, int fd);
-// void	ft_putstr_fd(char *s, int fd);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
 // void	ft_putendl_fd(char *s, int fd);
 // void	ft_putnbr_fd(int n, int fd);
 

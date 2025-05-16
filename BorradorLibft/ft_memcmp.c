@@ -6,12 +6,13 @@
 /*   By: kcanales <kcanales@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 15:22:03 by kcanales          #+#    #+#             */
-/*   Updated: 2025/05/14 16:04:44 by kcanales         ###   ########.fr       */
+/*   Updated: 2025/05/16 16:21:41 by kcanales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

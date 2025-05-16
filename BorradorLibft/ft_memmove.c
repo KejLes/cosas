@@ -6,13 +6,11 @@
 /*   By: kcanales <kcanales@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/07 11:41:28 by kcanales          #+#    #+#             */
-/*   Updated: 2025/05/14 13:35:28 by kcanales         ###   ########.fr       */
+/*   Updated: 2025/05/16 16:27:55 by kcanales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 static void	*while_memmove(
 	unsigned char *ptr_dest,

@@ -6,15 +6,12 @@
 /*   By: kcanales <kcanales@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/14 18:25:58 by kcanales          #+#    #+#             */
-/*   Updated: 2025/05/14 18:56:30 by kcanales         ###   ########.fr       */
+/*   Updated: 2025/05/16 16:11:52 by kcanales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libft.h"
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-
+#include "libft.h"
+/*
 size_t	ft_strlen(const char *s)
 {
 	int	i;
@@ -23,7 +20,7 @@ size_t	ft_strlen(const char *s)
 	while (s[i] != '\0')
 		i++;
 	return (i);
-}
+}*/
 
 char	*ft_strdup(const char *s)
 {

@@ -6,34 +6,33 @@
 /*   By: kcanales <kcanales@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 14:24:31 by kcanales          #+#    #+#             */
-/*   Updated: 2025/05/14 16:17:08 by kcanales         ###   ########.fr       */
+/*   Updated: 2025/05/16 19:13:08 by kcanales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libft.h"
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
 	int	i;
 
 	i = 0;
-	if (c == '\0')
-		return (NULL);
 	while (s[i] != '\0')
 	{
-		if (s[i] == c)
+		if (s[i] == (char)c)
 			return ((char *)&s[i]);
 		i++;
 	}
-	return (NULL);
+	if ((char)c == '\0')
+		return ((char *)&s[i]);
+	return (0);
 }
 
 /*
 int main() {
 	char texto[] = "Programación en C es divertido";
-	char buscar = 'C';
+	char buscar = '\0';
+	// char buscar = 'C';
 	
 	// Buscar la primera aparición de 'C'
 	char *resultado = ft_strchr(texto, buscar);

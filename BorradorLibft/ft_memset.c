@@ -6,12 +6,11 @@
 /*   By: kcanales <kcanales@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 10:37:49 by kcanales          #+#    #+#             */
-/*   Updated: 2025/05/14 12:28:23 by kcanales         ###   ########.fr       */
+/*   Updated: 2025/05/16 16:28:04 by kcanales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {

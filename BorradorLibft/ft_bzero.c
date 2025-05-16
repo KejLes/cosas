@@ -6,13 +6,14 @@
 /*   By: kcanales <kcanales@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 17:39:43 by kcanales          #+#    #+#             */
-/*   Updated: 2025/05/14 12:34:52 by kcanales         ###   ########.fr       */
+/*   Updated: 2025/05/16 16:21:10 by kcanales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include <stdio.h>
 #include <strings.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

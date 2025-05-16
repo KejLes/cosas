@@ -6,24 +6,11 @@
 /*   By: kcanales <kcanales@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 10:33:24 by kcanales          #+#    #+#             */
-/*   Updated: 2025/05/14 11:45:46 by kcanales         ###   ########.fr       */
+/*   Updated: 2025/05/16 18:58:51 by kcanales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
-#include <stdio.h>
-#include <string.h>
-#include <stddef.h>
-
-size_t	ft_strlen(const char *s)
-{
-	int	i;
-
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
@@ -40,6 +27,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		i++;
 		size--;
 	}
+	dst[i] = '\0';
 	return (len_src);
 }
 /*
@@ -64,4 +52,5 @@ int main(void)
 	printf("strcpy() str1: <%s>\nn: %d\n", str1, n);
 	printf("ft_strcpy str1: <%s>\nn: %d\n", str1_, n_);
 	
-}*/
+}
+*/

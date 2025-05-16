@@ -6,38 +6,24 @@
 /*   By: kcanales <kcanales@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 14:24:31 by kcanales          #+#    #+#             */
-/*   Updated: 2025/05/14 12:42:14 by kcanales         ###   ########.fr       */
+/*   Updated: 2025/05/16 19:16:38 by kcanales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libft.h"
-#include <stdio.h>
-#include <string.h>
-
-size_t	ft_strlen(const char *s)
-{
-	int	i;
-
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
 
 	i = ft_strlen(s);
-	while (i != 0)
+	while (i >= 0)
 	{
 		if (s[i] == c)
 			return ((char *)&s[i]);
 		i--;
 	}
-	if (c == '\0')
-		return (NULL);
-	return (NULL);
+	return (0);
 }
 
 /*

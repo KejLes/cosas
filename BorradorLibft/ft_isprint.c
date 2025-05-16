@@ -6,9 +6,11 @@
 /*   By: kcanales <kcanales@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 09:37:57 by kcanales          #+#    #+#             */
-/*   Updated: 2025/05/14 11:10:38 by kcanales         ###   ########.fr       */
+/*   Updated: 2025/05/16 16:21:32 by kcanales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

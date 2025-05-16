@@ -6,13 +6,11 @@
 /*   By: kcanales <kcanales@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 11:08:18 by kcanales          #+#    #+#             */
-/*   Updated: 2025/05/14 13:16:46 by kcanales         ###   ########.fr       */
+/*   Updated: 2025/05/16 16:29:15 by kcanales         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {
